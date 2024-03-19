@@ -4,7 +4,7 @@
 
 This is a React application designed to generate flashcards optimized for printing on both sides. Each flashcard contains a question on the front and its corresponding answer on the back.
 
-## How Does It Works
+## How Does It Work
 
 ### File Format
 
