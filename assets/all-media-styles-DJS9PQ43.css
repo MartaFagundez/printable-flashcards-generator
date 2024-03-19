@@ -924,11 +924,26 @@ figure {
 }
 
 .accordion-body a {
-  text-decoration: underline;
+  background: linear-gradient(
+      to right,
+      rgba(61, 194, 170, 1),
+      rgba(61, 194, 170, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(61, 194, 170, 1) 0%,
+      rgba(255, 222, 89, 1) 51%,
+      rgba(61, 194, 170, 1) 100%
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
+
 .accordion-body a:hover {
-  color: rgb(5, 168, 132);
-  font-weight: bold;
+  text-decoration: none;
+  background-size: 0 3px, 100% 3px;
 }
 
 @media screen and (min-width: 1200px) {
