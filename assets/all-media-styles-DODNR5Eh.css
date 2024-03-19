@@ -1,0 +1,946 @@
+/*
+**********************************************
+
+TABLE OF CONTENTS:
+
+1) GOOGLE FONTS
+
+2) VARIABLES CSS
+    A- Colors
+    B- Gradients
+    C- Fonts & Typography
+    D- Fonts Weights
+    E- Borders
+    F- Containers sizes
+    G- Cards sizes
+    H- Card-twins
+
+3) GENERAL
+
+4) CONTAINERS
+
+5) CARDS
+    A- Card Front
+    B- Card Back
+
+6) CATEGORIES COLORS
+
+7) FONT SIZES (depending on text length)
+
+8) EDITOR
+
+9) HOME
+
+10) MODAL INFO
+
+
+***********************************************
+*/
+
+/*-----------------------------------------------
+1) GOOGLE FONTS
+-----------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Poppins:wght@300;400;600&display=swap");
+
+/*-----------------------------------------------
+2) VARIABLES CSS
+-----------------------------------------------*/
+:root {
+  /*-----------------------------------------------
+  2) A- Colors
+  -----------------------------------------------*/
+  --plain-color-default: rgb(4, 127, 139);
+  --plain-color-one: rgb(4, 127, 139);
+  --plain-color-two: rgb(59, 109, 157);
+  --plain-color-three: rgb(16, 73, 131);
+  --plain-color-four: rgb(83, 87, 214);
+  --plain-color-five: rgb(14, 96, 76);
+  --plain-color-six: rgb(11, 80, 98);
+  --plain-color-seven: rgb(19, 58, 148);
+  --plain-color-eight: rgb(7, 20, 30);
+  --plain-color-nine: rgb(61, 194, 170);
+  --plain-color-ten: rgb(4, 109, 103);
+  --plain-color-eleven: rgb(0, 74, 173);
+  --plain-color-twelve: rgb(0, 74, 173);
+  --plain-color-thirteen: rgb(20, 125, 132);
+
+  /*-----------------------------------------------
+  2) B- Gradients
+  -----------------------------------------------*/
+  --gradient-default: linear-gradient(
+    180deg,
+    rgba(4, 127, 139, 1) 0%,
+    rgba(111, 229, 184, 1) 100%
+  );
+  --gradient-one: linear-gradient(
+    180deg,
+    rgba(4, 127, 139, 1) 0%,
+    rgba(111, 229, 184, 1) 100%
+  );
+  --gradient-two: linear-gradient(
+    180deg,
+    rgba(59, 109, 157, 1) 0%,
+    rgba(150, 235, 253, 1) 100%
+  );
+  --gradient-three: linear-gradient(
+    180deg,
+    rgba(16, 73, 131, 1) 0%,
+    rgba(37, 185, 238, 1) 100%
+  );
+  --gradient-four: linear-gradient(
+    180deg,
+    rgba(107, 207, 205, 1) 0%,
+    rgba(83, 87, 214, 1) 100%
+  );
+  --gradient-five: linear-gradient(
+    180deg,
+    rgba(14, 96, 76, 1) 0%,
+    rgba(148, 198, 98, 1) 100%
+  );
+  --gradient-six: linear-gradient(
+    180deg,
+    rgba(11, 80, 98, 1) 0%,
+    rgba(94, 219, 148, 1) 100%
+  );
+  --gradient-seven: linear-gradient(
+    180deg,
+    rgba(145, 155, 255, 1) 0%,
+    rgba(19, 58, 148, 1) 100%
+  );
+  --gradient-eight: linear-gradient(
+    180deg,
+    rgba(7, 20, 30, 1) 0%,
+    rgba(131, 146, 157, 1) 100%
+  );
+  --gradient-nine: linear-gradient(
+    180deg,
+    rgba(61, 194, 170, 1) 0%,
+    rgba(255, 222, 89, 1) 100%
+  );
+  --gradient-ten: linear-gradient(
+    180deg,
+    rgba(4, 109, 103, 1) 0%,
+    rgba(165, 248, 243, 1) 100%
+  );
+  --gradient-eleven: linear-gradient(
+    180deg,
+    rgba(0, 74, 173, 1) 0%,
+    rgba(203, 108, 230, 1) 100%
+  );
+  --gradient-twelve: linear-gradient(
+    0deg,
+    rgba(0, 74, 173, 1) 0%,
+    rgba(203, 108, 230, 1) 100%
+  );
+  --gradient-thirteen: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(237, 255, 251, 1) 63%,
+    rgba(207, 255, 246, 1) 73%,
+    rgba(160, 235, 221, 1) 82%,
+    rgba(109, 214, 194, 1) 92%,
+    rgba(54, 168, 147, 1) 100%
+  );
+  --gradient-thirteen-qr: linear-gradient(
+    180deg,
+    rgba(207, 255, 246, 1) 30%,
+    rgba(160, 235, 221, 1) 60%,
+    rgba(109, 214, 194, 1) 92%,
+    rgba(54, 168, 147, 1) 100%
+  );
+
+  /*-----------------------------------------------
+  2) C- Fonts & Typography
+  -----------------------------------------------*/
+  --body-font: "Open Sans", sans-serif;
+
+  /*-----------------------------------------------
+  2) D- Font Weights
+  -----------------------------------------------*/
+  --font-normal: 400;
+  --font-bold: 700;
+
+  /*-----------------------------------------------
+  2) E- Borders
+  -----------------------------------------------*/
+  --border-screen-subtle: 1px solid rgba(0, 0, 0, 0.075);
+  --border-print-subtle: 1px solid rgba(0, 0, 0, 0.075);
+
+  /*-----------------------------------------------
+  2) F- Containers sizes
+  -----------------------------------------------*/
+  --container-width: 1180px;
+  --container-height: 850px;
+  --container-padding-y: 40px;
+  --container-max-padding-x: 60px;
+  --container-min-padding-x: 40px;
+  --container-row-height: calc(
+    (var(--container-height) / 2) - var(--container-padding-y)
+  );
+
+  /*-----------------------------------------------
+  2) G- Cards sizes
+  -----------------------------------------------*/
+  --card-max-width: 260px;
+  --card-max-height: calc(var(--container-row-height) - 9px);
+  --card-max-padding: 22px;
+  --card-min-padding: 20px;
+  --card-bleed-padding: 12px;
+  --card-wrapper-padding: 8px;
+  --crop-marks-length: 14px;
+  --card-min-width: 230px;
+  --card-min-height: calc(
+    var(--container-row-height) -
+      ((var(--card-wrapper-padding) + var(--card-bleed-padding)) * 2)
+  );
+
+  /*-----------------------------------------------
+  2) H- Card-twins
+  -----------------------------------------------*/
+  --card-twin-width: clamp(110px, 30vw, 220px);
+}
+
+@media screen and (min-width: 1300px) {
+  :root {
+    --card-twin-width: clamp(110px, 17vw, 250px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  :root {
+    --card-twin-width: clamp(110px, 30vw, 265px);
+  }
+}
+
+/*-----------------------------------------------
+3) GENERAL
+-----------------------------------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  width: 100vw;
+  line-height: normal;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  /* line-height: 1.365; */
+  line-height: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  /* TO-DO: ajustar para que la vista de las hojas en el editor se vean bien */
+  /* padding: 3vh 3vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* TO-DO: ajustar para que la vista de las hojas en el editor se vean bien */
+  /* gap: 1.5rem; */
+}
+
+/*-----------------------------------------------
+4) CONTAINERS
+-----------------------------------------------*/
+.cards-container {
+  width: var(--container-width);
+  height: var(--container-height);
+  padding: var(--container-padding-y) var(--container-max-padding-x);
+  border: var(--border-screen-subtle);
+  border-radius: 5px;
+  background-color: white;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.075));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards-container.with-bleed {
+  padding: var(--container-padding-y) var(--container-min-padding-x);
+}
+
+.cards-container.back {
+  flex-direction: column-reverse;
+}
+
+.cards-container .cards-row {
+  width: 100%;
+  height: var(--container-row-height);
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+
+.cards-container.front .cards-row:nth-of-type(1),
+.cards-container.back .cards-row:nth-of-type(2) {
+  align-items: flex-start;
+}
+.cards-container.front .cards-row:nth-of-type(2),
+.cards-container.back .cards-row:nth-of-type(1) {
+  align-items: flex-end;
+}
+
+/*-----------------------------------------------
+5) CARDS
+-----------------------------------------------*/
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cards-container.with-bleed .card-wrapper {
+  padding: var(--card-wrapper-padding);
+}
+
+.marks-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.cards-container.with-bleed .marks-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards-container.back.with-bleed .marks-wrapper {
+  opacity: 0;
+}
+
+.left-marks-container,
+.center-marks-container,
+.right-marks-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-marks-container,
+.right-marks-container {
+  justify-content: center;
+}
+
+.center-marks-container {
+  justify-content: space-between;
+}
+
+.left-marks,
+.right-marks {
+  width: var(--crop-marks-length);
+  height: var(--card-min-height);
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+
+.center-marks {
+  width: var(--card-min-width);
+  height: var(--crop-marks-length);
+  border-left: 1.5px solid black;
+  border-right: 1.5px solid black;
+}
+
+.bleed-area {
+  display: flex;
+  z-index: 2;
+  padding: 0;
+}
+
+.cards-container.with-bleed .bleed-area {
+  padding: var(--card-bleed-padding);
+}
+
+.flashcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--card-max-width);
+  height: var(--card-max-height);
+  padding: var(--card-max-padding);
+}
+
+.cards-container.with-bleed .flashcard {
+  width: var(--card-min-width);
+  height: var(--card-min-height);
+  padding: var(--card-min-padding);
+}
+
+/*-----------------------------------------------
+5) A- Card Front
+-----------------------------------------------*/
+.category {
+  text-transform: uppercase;
+  color: white;
+}
+
+.question-wrapper {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  color: white;
+  text-align: center;
+  font-weight: var(--font-bold);
+  font-size: 24px;
+}
+
+.color-thirteen .category,
+.color-thirteen .question {
+  color: var(--plain-color-thirteen);
+}
+
+.flashcard.front .id-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.flashcard.front .id {
+  background-color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+/*-----------------------------------------------
+5) B- Card Back
+-----------------------------------------------*/
+.flashcard.back {
+  transform: rotate(180deg);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.header .id-wrapper {
+  display: flex;
+  background-color: var(--plain-color-one);
+  border-radius: 5px;
+}
+
+.header .id-wrapper .id {
+  color: white;
+  font-weight: var(--font-bold);
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+.color-thirteen .flashcard.back .id-wrapper .id {
+  color: var(--plain-color-thirteen);
+}
+
+.answer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.answer {
+  text-align: center;
+  color: var(--plain-color-one);
+  font-size: 18px;
+  font-weight: var(--font-bold);
+}
+
+.qr-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.qr {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: var(--plain-color-one);
+}
+
+.qr img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.color-thirteen .flashcard.back .id-wrapper,
+.color-thirteen .qr {
+  background: var(--gradient-thirteen-qr);
+}
+
+/*-----------------------------------------------
+6) CATEGORY COLORS
+-----------------------------------------------*/
+.color-default {
+  color: var(--plain-color-default);
+}
+.gradient-default {
+  background: var(--plain-color-default);
+  background: var(--gradient-default);
+}
+
+.color-one {
+  color: var(--plain-color-one);
+}
+.gradient-one {
+  background: var(--plain-color-one);
+  background: var(--gradient-one);
+}
+
+.color-two {
+  color: var(--plain-color-two);
+}
+.gradient-two {
+  background: var(--plain-color-two);
+  background: var(--gradient-two);
+}
+
+.color-three {
+  color: var(--plain-color-three);
+}
+.gradient-three {
+  background: var(--plain-color-three);
+  background: var(--gradient-three);
+}
+
+.color-four {
+  color: var(--plain-color-four);
+}
+.gradient-four {
+  background: var(--plain-color-four);
+  background: var(--gradient-four);
+}
+
+.color-five {
+  color: var(--plain-color-five);
+}
+.gradient-five {
+  background: var(--plain-color-five);
+  background: var(--gradient-five);
+}
+
+.color-six {
+  color: var(--plain-color-six);
+}
+.gradient-six {
+  background: var(--plain-color-six);
+  background: var(--gradient-six);
+}
+
+.color-seven {
+  color: var(--plain-color-seven);
+}
+.gradient-seven {
+  background: var(--plain-color-seven);
+  background: var(--gradient-seven);
+}
+
+.color-eight {
+  color: var(--plain-color-eight);
+}
+.gradient-eight {
+  background: var(--plain-color-eight);
+  background: var(--gradient-eight);
+}
+
+.color-nine {
+  color: var(--plain-color-nine);
+}
+.gradient-nine {
+  background: var(--plain-color-nine);
+  background: var(--gradient-nine);
+}
+
+.color-ten {
+  color: var(--plain-color-ten);
+}
+.gradient-ten {
+  background: var(--plain-color-ten);
+  background: var(--gradient-ten);
+}
+
+.color-eleven {
+  color: var(--plain-color-eleven);
+}
+.gradient-eleven {
+  background: var(--plain-color-eleven);
+  background: var(--gradient-eleven);
+}
+
+.color-twelve {
+  color: var(--plain-color-twelve);
+}
+.gradient-twelve {
+  background: var(--plain-color-twelve);
+  background: var(--gradient-twelve);
+}
+
+.color-thirteen {
+  color: var(--plain-color-thirteen);
+}
+.gradient-thirteen {
+  background: white;
+  background: var(--gradient-thirteen);
+}
+
+/*-----------------------------------------------
+7) FONT SIZES (depending on text length)
+-----------------------------------------------*/
+/* QUESTIONS */
+/* 50 characters or more and less than 70 */
+.question.md {
+  font-size: 22px;
+}
+
+/* 70 characters or more and less than 85 */
+.question.lg {
+  font-size: 21px;
+}
+
+/* 85 characters or more and less than 100 */
+.question.xl {
+  font-size: 20px;
+}
+
+/* 100 characters or more */
+.question.xxl {
+  font-size: 19px;
+}
+
+/* ANSWERS */
+/* 120 characters or more and less than 140 */
+.answer.md {
+  font-size: 17px;
+}
+
+/* 140 characters or more and less than 160 */
+.answer.lg {
+  font-size: 16.5px;
+}
+
+/* 160 characters or more and less than 180 */
+.answer.xl {
+  font-size: 16px;
+}
+
+/* 180 characters or more and less than 210 */
+.answer.xxl {
+  font-size: 15.25px;
+}
+
+/* 210 characters or more and less than 220 */
+.answer.xxxl {
+  font-size: 15px;
+}
+
+/* 220 or more characters */
+.answer.xxxxl {
+  font-size: 14.5px;
+}
+
+.cards-container.with-bleed {
+  /* 120 characters or more and less than 140 */
+  .answer.md {
+    font-size: 16px;
+  }
+
+  /* 140 characters or more and less than 160 */
+  .answer.lg {
+    font-size: 15.5px;
+  }
+
+  /* 160 characters or more and less than 180 */
+  .answer.xl {
+    font-size: 15px;
+  }
+
+  /* 180 characters or more and less than 210 */
+  .answer.xxl {
+    font-size: 14.5px;
+  }
+
+  /* 210 characters or more and less than 220 */
+  .answer.xxxl {
+    font-size: 14px;
+  }
+
+  /* 220 or more characters */
+  .answer.xxxxl {
+    font-size: 13.5px;
+  }
+}
+
+/*-----------------------------------------------
+8) EDITOR
+-----------------------------------------------*/
+.editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ebeeef;
+}
+
+.editor-navbar {
+  position: relative;
+}
+.editor-navbar button {
+  position: absolute;
+  top: 0.5rem;
+  left: -0.5rem;
+  z-index: 2;
+}
+
+.panels-wrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.settings-section {
+  max-width: 75vw;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  padding: 1.5rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.btn.print-button {
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    rgba(61, 194, 170, 1) 0%,
+    rgba(255, 222, 89, 1) 51%,
+    rgba(61, 194, 170, 1) 100%
+  );
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
+}
+
+.btn.print-button:hover {
+  color: white;
+  background-position: right center; /* change the direction of the change here */
+}
+
+/*-----------------------------------------------
+9) HOME
+-----------------------------------------------*/
+.hero-title {
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(3.75rem, 15vw, 5rem);
+}
+
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.125rem;
+}
+
+.twins-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12vw;
+}
+
+.card-twin {
+  width: var(--card-twin-width);
+  height: calc((var(--card-twin-width) / 3) * 4);
+  position: relative;
+  perspective: 150rem;
+  transform-origin: bottom center;
+}
+
+.card-twin:not(:first-of-type) {
+  margin-left: calc(var(--card-twin-width) * -1);
+}
+
+.card-twin:nth-of-type(3) {
+  z-index: 3;
+}
+.card-twin:nth-of-type(2),
+.card-twin:nth-of-type(4) {
+  z-index: 2;
+}
+
+.card-twin-front,
+.card-twin-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: clamp(14px, 3vw, 24px);
+  overflow: hidden;
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.1));
+  backface-visibility: hidden;
+  color: white;
+  background-color: white;
+  transition: all 0.8s ease;
+  transform-origin: bottom center;
+}
+
+.card-twin-back {
+  transform: rotateY(180deg);
+  color: black;
+  border: 0.5px solid rgba(0, 0, 0, 0.075);
+}
+
+.card-twin:nth-of-type(3):hover .card-twin-front {
+  transform: rotateY(0) !important;
+}
+
+.card-twin:nth-of-type(3):hover .card-twin-back {
+  transform: rotateY(180deg) !important;
+}
+
+.card-twin p {
+  font-size: clamp(60px, 13vw, 142px);
+  font-family: "Gayathri", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 1vw;
+}
+
+.upload-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload-input:focus + label {
+  outline: 3px solid rgba(103, 187, 255, 0.8);
+}
+
+.btn.button-info-dark {
+  color: rgb(33, 37, 41);
+}
+.btn.button-info-dark:hover {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.btn.button-info-light {
+  color: rgb(233, 236, 238);
+}
+.btn.button-info-light:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*-----------------------------------------------
+10) MODAL INFO
+-----------------------------------------------*/
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(33, 37, 41);
+}
+
+.accordion-header button {
+  font-weight: bold;
+}
+
+.accordion-body-block {
+  margin-bottom: 3rem;
+}
+
+.accordion-body h4 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.accordion-body p {
+  margin-bottom: 1rem;
+}
+
+.accordion-body ul {
+  margin-bottom: 3rem;
+}
+
+.accordion-body ul li {
+  margin-bottom: 1rem;
+}
+
+.accordion-body ul li span {
+  font-weight: bold;
+}
+
+.accordion-body a {
+  text-decoration: underline;
+}
+.accordion-body a:hover {
+  color: rgb(5, 168, 132);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+  .twins-container {
+    margin-left: -4vw;
+  }
+
+  .card-twin p {
+    font-size: clamp(60px, 9vw, 142px);
+    font-family: "Gayathri", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 1vw;
+  }
+}
