@@ -1,0 +1,169 @@
+/*
+**********************************************
+
+TABLE OF CONTENTS:
+
+1) VARIABLES CSS
+    A- Containers sizes
+    B- Cards sizes
+
+2) GENERAL
+
+3) CONTAINERS
+
+4) CARDS
+    A- Card Front
+    B- Card Back
+    
+5) EDITOR
+
+
+***********************************************
+*/
+
+/*-----------------------------------------------
+1) VARIABLES CSS
+-----------------------------------------------*/
+:root {
+  /*-----------------------------------------------
+    1) A- Containers sizes
+    -----------------------------------------------*/
+  --container-width: 297mm;
+  --container-height: 210mm;
+  --container-padding-y: 10mm;
+  --container-max-padding-x: 15mm;
+  --container-min-padding-x: 10mm;
+  --container-row-height: calc(
+    (var(--container-height) / 2) - var(--container-padding-y)
+  );
+
+  /*-----------------------------------------------
+    1) B- Cards sizes
+    -----------------------------------------------*/
+  --card-max-width: 65mm;
+  --card-max-height: calc(var(--container-row-height) - 1.5mm);
+  --card-max-padding: 5mm;
+  --card-min-padding: 4mm;
+  --card-bleed-padding: 3mm;
+  --card-wrapper-padding: 2mm;
+  --crop-marks-length: 3mm;
+  --card-min-width: 58.5mm;
+  --card-min-height: calc(
+    var(--container-row-height) -
+      ((var(--card-wrapper-padding) + var(--card-bleed-padding)) * 2)
+  );
+}
+
+/*-----------------------------------------------
+2) GENERAL
+-----------------------------------------------*/
+* {
+  print-color-adjust: exact;
+}
+
+body {
+  width: var(--container-width);
+}
+
+#root {
+  padding: 0;
+  gap: 0;
+}
+
+/*-----------------------------------------------
+3) CONTAINERS
+-----------------------------------------------*/
+.cards-container {
+  width: var(--container-width);
+  max-width: var(--container-width);
+  height: var(--container-height);
+  padding: var(--container-padding-y) var(--container-max-padding-x);
+  border: 0;
+  border-radius: 0;
+  filter: none;
+}
+
+.cards-container.with-bleed {
+  padding: var(--container-padding-y) var(--container-min-padding-x);
+}
+
+.cards-container .cards-row {
+  height: var(--container-row-height);
+  gap: 0.85mm;
+}
+
+.cards-container.back .cards-row {
+  padding: 0;
+}
+
+/*-----------------------------------------------
+4) CARDS
+-----------------------------------------------*/
+.cards-container.with-bleed .card-wrapper {
+  padding: var(--card-wrapper-padding);
+}
+
+.left-marks,
+.right-marks {
+  width: var(--crop-marks-length);
+  height: var(--card-min-height);
+}
+
+.center-marks {
+  width: var(--card-min-width);
+  height: var(--crop-marks-length);
+}
+
+.cards-container.with-bleed .bleed-area {
+  padding: var(--card-bleed-padding);
+}
+
+.flashcard {
+  width: var(--card-max-width);
+  height: var(--card-max-height);
+  padding: var(--card-max-padding);
+}
+
+.cards-container.with-bleed .flashcard {
+  width: var(--card-min-width);
+  height: var(--card-min-height);
+  padding: var(--card-min-padding);
+}
+
+/*-----------------------------------------------
+4) A- Card Front
+-----------------------------------------------*/
+.flashcard.front .module {
+  font-size: 14px;
+}
+
+/*-----------------------------------------------
+4) B- Card Back
+-----------------------------------------------*/
+.answer {
+  font-size: 18.2px;
+}
+
+.qr {
+  width: 20mm;
+  height: 20mm;
+}
+
+/*-----------------------------------------------
+5) EDITOR
+-----------------------------------------------*/
+.editor-wrapper {
+  background-color: white;
+}
+
+.editor-navbar,
+.settings-section {
+  display: none;
+}
+
+.cards-section {
+  height: auto;
+  overflow: visible;
+  padding: 0;
+  gap: 0;
+}

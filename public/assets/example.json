@@ -1,0 +1,106 @@
+[
+  {
+    "id": "001",
+    "question": "What is the history behind flashcards?",
+    "answer": "Flashcards have been used as a learning tool since the 19th century, with their roots traced back to Germany.",
+    "category_name": "History",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "002",
+    "question": "Who popularized the use of flashcards?",
+    "answer": "Sebastian Leitner is credited with popularizing the use of flashcards as a learning technique in his book 'So lernt man lernen' (How to Learn to Learn) in 1972.",
+    "category_name": "History"
+  },
+  {
+    "id": "003",
+    "question": "What is the Leitner system?",
+    "answer": "The Leitner system is a spaced repetition technique used with flashcards, involving the review of cards at increasing intervals to optimize long-term retention.",
+    "category_name": "History",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "004",
+    "question": "How can flashcards be used effectively?",
+    "answer": "Flashcards can be used effectively by actively engaging with the material, practicing retrieval, and spacing out study sessions over time.",
+    "category_name": "How to use"
+  },
+  {
+    "id": "005",
+    "question": "What is the principle of spaced repetition?",
+    "answer": "Spaced repetition involves reviewing flashcards at increasing intervals over time, allowing for optimal memory retention.",
+    "category_name": "How to use"
+  },
+  {
+    "id": "006",
+    "question": "What are the benefits of using flashcards?",
+    "answer": "Flashcards promote active recall, help in organizing information, and facilitate spaced repetition, leading to efficient learning and retention.",
+    "category_name": "How to use",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "007",
+    "question": "How can flashcards aid in language learning?",
+    "answer": "Flashcards are commonly used in language learning to practice vocabulary, grammar rules, and sentence structures, aiding in memorization and fluency development.",
+    "category_name": "How to use"
+  },
+  {
+    "id": "008",
+    "question": "What are some effective ways to use flashcards for studying?",
+    "answer": "Effective ways to use flashcards for studying include creating clear and concise questions, reviewing cards regularly, and incorporating spaced repetition techniques.",
+    "category_name": "How to use",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "009",
+    "question": "How can flashcards be used outside of academics?",
+    "answer": "Flashcards can be used outside of academics for memorizing facts, learning new skills, improving vocabulary, and even for self-assessment and goal tracking.",
+    "category_name": "Utility",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "010",
+    "question": "What is the role of flashcards in medical education?",
+    "answer": "In medical education, flashcards are commonly used for memorizing anatomy, medical terminology, drug names, and other essential information.",
+    "category_name": "Utility"
+  },
+  {
+    "id": "011",
+    "question": "How do flashcards benefit visual learners?",
+    "answer": "Flashcards benefit visual learners by providing visual cues and associations, aiding in memory recall and comprehension.",
+    "category_name": "Utility",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "012",
+    "question": "Can flashcards be used for test preparation?",
+    "answer": "Yes, flashcards are an effective tool for test preparation, helping in active recall, memorization, and self-assessment of key concepts.",
+    "category_name": "Utility"
+  },
+  {
+    "id": "013",
+    "question": "What are some surprising facts about flashcards?",
+    "answer": "Flashcards have been used not only for learning but also for therapeutic purposes, such as in treating patients with memory disorders.",
+    "category_name": "Curious Facts"
+  },
+  {
+    "id": "014",
+    "question": "Who invented the first flashcards?",
+    "answer": "The invention of flashcards is often credited to Johann Heinrich Pestalozzi, a Swiss pedagogue, in the late 18th century.",
+    "category_name": "Curious Facts",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  },
+  {
+    "id": "015",
+    "question": "What are some modern uses of flashcards?",
+    "answer": "In addition to traditional paper flashcards, modern technology has led to digital flashcards, mobile apps, and online platforms for flashcard-based learning.",
+    "category_name": "Curious Facts"
+  },
+  {
+    "id": "016",
+    "question": "Are there any studies supporting the effectiveness of flashcards?",
+    "answer": "Several studies have demonstrated the effectiveness of flashcards in enhancing learning, memory retention, and information recall across various subjects and age groups.",
+    "category_name": "Curious Facts",
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
+  }
+]

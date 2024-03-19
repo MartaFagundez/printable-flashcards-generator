@@ -1,0 +1,20 @@
+// Customize default theme variables
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Add custom theme
+$custom-colors: (
+  "neutral-100": #00171f,
+  "neutral-80": #242b33,
+  "neutral-60": #667479,
+  "neutral-40": #99a2a5,
+  "neutral-20": #ccd1d2,
+  "neutral-10": #ebeeef,
+  "neutral-0": #fdfdfd,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Include Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
