@@ -4,7 +4,7 @@
     "question": "What is the history behind flashcards?",
     "answer": "Flashcards have been used as a learning tool since the 19th century, with their roots traced back to Germany.",
     "category_name": "History",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "002",
@@ -17,7 +17,7 @@
     "question": "What is the Leitner system?",
     "answer": "The Leitner system is a spaced repetition technique used with flashcards, involving the review of cards at increasing intervals to optimize long-term retention.",
     "category_name": "History",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "004",
@@ -36,7 +36,7 @@
     "question": "What are the benefits of using flashcards?",
     "answer": "Flashcards promote active recall, help in organizing information, and facilitate spaced repetition, leading to efficient learning and retention.",
     "category_name": "How to use",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "007",
@@ -49,14 +49,14 @@
     "question": "What are some effective ways to use flashcards for studying?",
     "answer": "Effective ways to use flashcards for studying include creating clear and concise questions, reviewing cards regularly, and incorporating spaced repetition techniques.",
     "category_name": "How to use",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "009",
     "question": "How can flashcards be used outside of academics?",
     "answer": "Flashcards can be used outside of academics for memorizing facts, learning new skills, improving vocabulary, and even for self-assessment and goal tracking.",
     "category_name": "Utility",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "010",
@@ -69,7 +69,7 @@
     "question": "How do flashcards benefit visual learners?",
     "answer": "Flashcards benefit visual learners by providing visual cues and associations, aiding in memory recall and comprehension.",
     "category_name": "Utility",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "012",
@@ -88,7 +88,7 @@
     "question": "Who invented the first flashcards?",
     "answer": "The invention of flashcards is often credited to Johann Heinrich Pestalozzi, a Swiss pedagogue, in the late 18th century.",
     "category_name": "Curious Facts",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   },
   {
     "id": "015",
@@ -101,6 +101,6 @@
     "question": "Are there any studies supporting the effectiveness of flashcards?",
     "answer": "Several studies have demonstrated the effectiveness of flashcards in enhancing learning, memory retention, and information recall across various subjects and age groups.",
     "category_name": "Curious Facts",
-    "qr_url": "https://martafagundez.github.io/printable-flashcards-by-upload/assets/qr_example.png"
+    "qr_url": "https://martafagundez.github.io/printable-flashcards-generator/assets/qr_example.png"
   }
 ]
