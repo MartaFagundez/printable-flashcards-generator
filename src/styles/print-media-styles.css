@@ -157,7 +157,9 @@ body {
 }
 
 .editor-navbar,
-.settings-section {
+.settings-section,
+.modal,
+.offcanvas-backdrop {
   display: none;
 }
 
