@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useFlashcardsContext } from '../contexts/FlashcardsContext';
 import FlashcardsUploader from "../components/FlashcardsUploader.jsx";
-import { colorStylesList } from '../utils/colorStyles.js';
+import CategoryStyleThumb from './CategoryStyleThumb.jsx';
 
 export default function SettingsPanel() {
     const {store: {bleed, hideId, qrImageErrors, flashcardsList, categoriesList}, actions: {setBleed, setHideId, setQrImageErrors}} = useFlashcardsContext();
@@ -59,10 +59,7 @@ export default function SettingsPanel() {
                     {
                         categoriesListItems.map(category => {
                             return (
-                                <div key={category.name} className="category-style-wrapper">
-                                    <div className={`category-style-gradient ${colorStylesList[category.style].gradientStyle}`}></div>
-                                    <p >{category.name === "none" ? "Uncategorized" : category.name}</p>
-                                </div>
+                                <CategoryStyleThumb key={category.name} category={category} />
                             )
                         })
                     }
