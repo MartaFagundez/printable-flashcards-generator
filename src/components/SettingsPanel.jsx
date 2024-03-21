@@ -2,9 +2,15 @@ import React from 'react';
 
 import { useFlashcardsContext } from '../contexts/FlashcardsContext';
 import FlashcardsUploader from "../components/FlashcardsUploader.jsx";
+import { colorStylesList } from '../utils/colorStyles.js';
 
 export default function SettingsPanel() {
-    const {store: {bleed, hideId, qrImageErrors, flashcardsList}, actions: {setBleed, setHideId, setQrImageErrors}} = useFlashcardsContext();
+    const {store: {bleed, hideId, qrImageErrors, flashcardsList, categoriesList}, actions: {setBleed, setHideId, setQrImageErrors}} = useFlashcardsContext();
+
+    const categoriesListItems = Object.keys(categoriesList).map(categoryItem => ({
+        name: categoryItem,
+        style: categoriesList[categoryItem]
+    }));
 
   return (
     <div className='d-flex flex-column p-4 p-md-2 ps-md-0 me-2 text-neutral-20 h-100' style={{ width: "250px" }}>
@@ -45,6 +51,21 @@ export default function SettingsPanel() {
                             Hide IDs
                         </label>
                     </div>
+                </div>
+
+                {/* Categories styles */}
+                <div className="border-bottom py-4">
+                    <h4 className='fw-semibold fs-6 mb-3'>Category Styles</h4>
+                    {
+                        categoriesListItems.map(category => {
+                            return (
+                                <div key={category.name} className="category-style-wrapper">
+                                    <div className={`category-style-gradient ${colorStylesList[category.style].gradientStyle}`}></div>
+                                    <p >{category.name === "none" ? "Uncategorized" : category.name}</p>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </>
         }

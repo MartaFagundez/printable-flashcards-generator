@@ -773,6 +773,21 @@ figure {
   background-position: right center; /* change the direction of the change here */
 }
 
+.category-style-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.category-style-gradient {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+}
+
 /*-----------------------------------------------
 9) HOME
 -----------------------------------------------*/
