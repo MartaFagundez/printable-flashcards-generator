@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import { useFlashcardsContext } from "../contexts/FlashcardsContext";
 import { Tooltip } from 'react-tooltip';
@@ -174,4 +175,8 @@ export default function FlashcardsUploader({page="home"}) {
       )}
     </div>
   );
+}
+
+FlashcardsUploader.propTypes = {
+  page: PropTypes.string
 }

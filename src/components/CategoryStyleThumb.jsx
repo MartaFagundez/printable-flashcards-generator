@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { colorStylesList } from '../utils/colorStyles.js';
 
@@ -9,4 +10,11 @@ export default function CategoryStyleThumb({category}) {
         <p >{category.name === "none" ? "Uncategorized" : category.name}</p>
     </div>
   )
+}
+
+CategoryStyleThumb.propTypes = {
+    category: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        style: PropTypes.string.isRequired
+    })
 }
