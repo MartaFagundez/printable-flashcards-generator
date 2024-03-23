@@ -32,7 +32,7 @@ export default function Editor() {
       const front = (
         <CardFront
           key={`front-${index}`}
-          id={ id === undefined ? index + 1 : id}
+          id={(id === undefined ? index + 1 : id).toString()}
           category={category_name}
           question={question}
           colorStyle={colorStyle}
@@ -43,7 +43,7 @@ export default function Editor() {
       const back = (
         <CardBack
           key={`back-${index}`}
-          id={ id === undefined ? index + 1 : id}
+          id={ (id === undefined ? index + 1 : id).toString()}
           answer={answer}
           qrUrl={qr_url}
           colorStyle={colorStyle}
@@ -79,7 +79,7 @@ export default function Editor() {
       {/* Panels */}
       <div className="panels-wrapper">
         {/* Settings Panel */}
-        <section className="settings-section offcanvas-xxl offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        <section className="settings-section offcanvas-xxl offcanvas-start text-bg-dark vh-100" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
             <div className="d-flex d-xxl-none justify-content-end position-relative z-3">
               <button
                 type="button"

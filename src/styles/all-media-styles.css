@@ -773,6 +773,10 @@ figure {
   background-position: right center; /* change the direction of the change here */
 }
 
+.category-styles-collapse-btn {
+  color: rgb(204, 209, 210);
+}
+
 .category-style-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -780,11 +784,38 @@ figure {
   gap: 0.5rem;
   width: 100%;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .category-style-gradient {
   width: 1.5rem;
   height: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.category-style-wrapper:hover .category-style-gradient {
+  border: 2px solid white;
+}
+
+.style-gradient-thumb {
+  width: 4rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.style-gradient-thumb:hover,
+.style-gradient-thumb.selected {
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  padding: 2px;
+}
+
+.thumb-inner {
+  width: 100%;
+  height: 100%;
+}
+.style-gradient-thumb:hover .thumb-inner,
+.style-gradient-thumb.selected .thumb-inner {
   border-radius: 0.25rem;
 }
 

@@ -27,6 +27,6 @@ export default function InfoModal({showModal, setShowModal}) {
 }
 
 InfoModal.propTypes = {
-    showModal: PropTypes.func.isRequired,
+    showModal: PropTypes.bool.isRequired,
     setShowModal: PropTypes.func.isRequired
 }
