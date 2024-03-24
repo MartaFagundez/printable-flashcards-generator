@@ -163,6 +163,9 @@ body {
 }
 
 .cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: auto;
   overflow: visible;
   padding: 0;
