@@ -777,6 +777,11 @@ figure {
   color: rgb(204, 209, 210);
 }
 
+.url-errors-collapse-btn,
+.url-errors-collapse-btn:hover {
+  color: #c51e3a;
+}
+
 .category-style-wrapper {
   display: flex;
   justify-content: flex-start;

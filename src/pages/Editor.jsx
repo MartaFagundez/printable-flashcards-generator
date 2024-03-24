@@ -28,10 +28,15 @@ export default function Editor() {
       const { id, question, answer, category_name, qr_url } = flashcard;
       const categoryStyle = categoriesList[category_name ? category_name : "none"];
       const { colorStyle, gradientStyle } = colorStylesList[categoryStyle];
+      
+      let uniqueTime = "";
+      if (qr_url) {
+        uniqueTime = new Date().getTime().toString();
+      }
 
       const front = (
         <CardFront
-          key={`front-${index}`}
+          key={`front-${question}${id ? id : ""}${category_name ? category_name : ""}`}
           id={(id === undefined ? index + 1 : id).toString()}
           category={category_name}
           question={question}
@@ -42,7 +47,7 @@ export default function Editor() {
 
       const back = (
         <CardBack
-          key={`back-${index}`}
+          key={`back-${answer}${id ? id : ""}${qr_url ? qr_url + uniqueTime : ""}`}
           id={ (id === undefined ? index + 1 : id).toString()}
           answer={answer}
           qrUrl={qr_url}

@@ -9,7 +9,7 @@ const storeInitialState = {
     flashcardsList: [],
     categoriesList: {},
     selectedCategory: null,
-    qrImageErrors: [],
+    qrUrlErrors: [],
     hideId: false,
     bleed: false
 }
@@ -27,6 +27,7 @@ export function FlashcardsContextProvider({children}) {
         setFlashcardsList: (payload) => {
             return setStore(prevState => ({
                 ...prevState,
+                qrUrlErrors: [],
                 flashcardsList: payload
             }))
         },
@@ -42,10 +43,10 @@ export function FlashcardsContextProvider({children}) {
                 selectedCategory: payload
             }))
         },
-        setQrImageErrors: (payload) => {
+        setQrUrlErrors: (payload) => {
             return setStore(prevState => ({
                 ...prevState,
-                qrImageErrors: payload
+                qrUrlErrors: payload
             }))
         },
         setHideId: (payload) => {

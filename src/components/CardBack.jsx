@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useFlashcardsContext } from "../contexts/FlashcardsContext";
 
 export default function CardBack({ id="", answer="", qrUrl="", gradientStyle="gradient-default", colorStyle="color-default" }) {
-    const {store: {qrImageErrors, hideId}, actions: {setQrImageErrors}} = useFlashcardsContext();
+    const {store: {qrUrlErrors, hideId}, actions: {setQrUrlErrors}} = useFlashcardsContext();
     const [imageError, setImageError] = useState(false);
 
     let fontSizeStyle = "";
@@ -28,8 +28,12 @@ export default function CardBack({ id="", answer="", qrUrl="", gradientStyle="gr
         fontSizeStyle = "xxxxl";
     }
 
-    function onImageError() {
-        setQrImageErrors([...qrImageErrors, id]);
+
+    function onImageError(url) {
+        if (!qrUrlErrors.includes(url))
+        {
+            setQrUrlErrors([...qrUrlErrors, url]);
+        }
         setImageError(true);
     }
 
@@ -68,7 +72,7 @@ export default function CardBack({ id="", answer="", qrUrl="", gradientStyle="gr
                         qrUrl && !imageError &&
                         <div className="qr-wrapper">
                             <figure className={`qr ${gradientStyle}`}>
-                                <img src={qrUrl} alt="QR code to related information" onError={onImageError} />
+                                <img src={qrUrl} alt="QR code to related information" onError={() => onImageError(qrUrl)} />
                             </figure>
                         </div>
                     }
