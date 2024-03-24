@@ -50,7 +50,7 @@ TABLE OF CONTENTS:
   /*-----------------------------------------------
   2) A- Colors
   -----------------------------------------------*/
-  --plain-color-default: rgb(4, 127, 139);
+  --plain-color-default: rgb(61, 194, 170);
   --plain-color-one: rgb(4, 127, 139);
   --plain-color-two: rgb(59, 109, 157);
   --plain-color-three: rgb(16, 73, 131);
@@ -63,15 +63,19 @@ TABLE OF CONTENTS:
   --plain-color-ten: rgb(4, 109, 103);
   --plain-color-eleven: rgb(0, 74, 173);
   --plain-color-twelve: rgb(0, 74, 173);
-  --plain-color-thirteen: rgb(20, 125, 132);
+  --plain-color-thirteen: rgb(217, 28, 132);
+  --plain-color-fourteen: rgb(250, 113, 205);
+  --plain-color-fifteen: rgb(255, 100, 100);
+  --plain-color-sixteen: rgb(222, 97, 226);
+  --plain-color-seventeen: rgb(131, 83, 241);
 
   /*-----------------------------------------------
   2) B- Gradients
   -----------------------------------------------*/
   --gradient-default: linear-gradient(
     180deg,
-    rgba(4, 127, 139, 1) 0%,
-    rgba(111, 229, 184, 1) 100%
+    rgba(61, 194, 170, 1) 0%,
+    rgba(255, 222, 89, 1) 100%
   );
   --gradient-one: linear-gradient(
     180deg,
@@ -96,7 +100,7 @@ TABLE OF CONTENTS:
   --gradient-five: linear-gradient(
     180deg,
     rgba(14, 96, 76, 1) 0%,
-    rgba(148, 198, 98, 1) 100%
+    rgba(182, 244, 146, 1) 100%
   );
   --gradient-six: linear-gradient(
     180deg,
@@ -125,7 +129,7 @@ TABLE OF CONTENTS:
   );
   --gradient-eleven: linear-gradient(
     180deg,
-    rgba(0, 74, 173, 1) 0%,
+    #004aad 0%,
     rgba(203, 108, 230, 1) 100%
   );
   --gradient-twelve: linear-gradient(
@@ -134,20 +138,30 @@ TABLE OF CONTENTS:
     rgba(203, 108, 230, 1) 100%
   );
   --gradient-thirteen: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(237, 255, 251, 1) 63%,
-    rgba(207, 255, 246, 1) 73%,
-    rgba(160, 235, 221, 1) 82%,
-    rgba(109, 214, 194, 1) 92%,
-    rgba(54, 168, 147, 1) 100%
+    0deg,
+    rgb(253, 136, 218) 0%,
+    rgb(217, 28, 132) 100%
   );
-  --gradient-thirteen-qr: linear-gradient(
-    180deg,
-    rgba(207, 255, 246, 1) 30%,
-    rgba(160, 235, 221, 1) 60%,
-    rgba(109, 214, 194, 1) 92%,
-    rgba(54, 168, 147, 1) 100%
+  --gradient-fourteen: linear-gradient(
+    0deg,
+    rgba(196, 113, 245, 1) 0%,
+    rgba(250, 113, 205, 1) 100%
+  );
+  --gradient-fifteen: linear-gradient(
+    0deg,
+    rgb(255, 230, 112) 10.4%,
+    rgb(255, 100, 100) 43.8%,
+    rgb(0, 93, 219) 105.8%
+  );
+  --gradient-sixteen: linear-gradient(
+    0deg,
+    rgba(253, 199, 141, 1) 0%,
+    rgb(222, 97, 226) 100%
+  );
+  --gradient-seventeen: linear-gradient(
+    0deg,
+    rgba(236, 158, 248, 1) 0%,
+    rgba(131, 83, 241, 1) 100%
   );
 
   /*-----------------------------------------------
@@ -421,11 +435,6 @@ figure {
   font-size: 24px;
 }
 
-.color-thirteen .category,
-.color-thirteen .question {
-  color: var(--plain-color-thirteen);
-}
-
 .flashcard.front .id-wrapper {
   display: flex;
   width: 100%;
@@ -464,10 +473,6 @@ figure {
   border-radius: 5px;
 }
 
-.color-thirteen .flashcard.back .id-wrapper .id {
-  color: var(--plain-color-thirteen);
-}
-
 .answer-wrapper {
   display: flex;
   justify-content: center;
@@ -502,11 +507,6 @@ figure {
 .qr img {
   max-width: 100%;
   object-fit: cover;
-}
-
-.color-thirteen .flashcard.back .id-wrapper,
-.color-thirteen .qr {
-  background: var(--gradient-thirteen-qr);
 }
 
 /*-----------------------------------------------
@@ -620,8 +620,40 @@ figure {
   color: var(--plain-color-thirteen);
 }
 .gradient-thirteen {
-  background: white;
+  background: var(--plain-color-thirteen);
   background: var(--gradient-thirteen);
+}
+
+.color-fourteen {
+  color: var(--plain-color-fourteen);
+}
+.gradient-fourteen {
+  background: var(--plain-color-fourteen);
+  background: var(--gradient-fourteen);
+}
+
+.color-fifteen {
+  color: var(--plain-color-fifteen);
+}
+.gradient-fifteen {
+  background: var(--plain-color-fifteen);
+  background: var(--gradient-fifteen);
+}
+
+.color-sixteen {
+  color: var(--plain-color-sixteen);
+}
+.gradient-sixteen {
+  background: var(--plain-color-sixteen);
+  background: var(--gradient-sixteen);
+}
+
+.color-seventeen {
+  color: var(--plain-color-seventeen);
+}
+.gradient-seventeen {
+  background: var(--plain-color-seventeen);
+  background: var(--gradient-seventeen);
 }
 
 /*-----------------------------------------------

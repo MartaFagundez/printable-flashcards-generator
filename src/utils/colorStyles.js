@@ -54,5 +54,21 @@ export const colorStylesList = {
     style13: {
         colorStyle: "color-thirteen",
         gradientStyle: "gradient-thirteen"
-    }
+    },
+    style14: {
+        colorStyle: "color-fourteen",
+        gradientStyle: "gradient-fourteen"
+    },
+    style15: {
+        colorStyle: "color-fifteen",
+        gradientStyle: "gradient-fifteen"
+    },
+    style16: {
+        colorStyle: "color-sixteen",
+        gradientStyle: "gradient-sixteen"
+    },
+    style17: {
+        colorStyle: "color-seventeen",
+        gradientStyle: "gradient-seventeen"
+    },
 };
