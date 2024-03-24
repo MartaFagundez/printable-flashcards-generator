@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import React, {useState} from "react";
+import PropTypes from 'prop-types';
 
 import { useFlashcardsContext } from "../contexts/FlashcardsContext";
 
-function CardBack({ id="", answer="", qrUrl="", gradientStyle="", colorStyle="" }) {
-    const {store: {qrImageErrors, hideId}, actions: {setQrImageErrors}} = useFlashcardsContext();
+export default function CardBack({ id="", answer="", qrUrl="", gradientStyle="gradient-default", colorStyle="color-default" }) {
+    const {store: {qrUrlErrors, hideId}, actions: {setQrUrlErrors}} = useFlashcardsContext();
     const [imageError, setImageError] = useState(false);
 
     let fontSizeStyle = "";
@@ -27,8 +28,12 @@ function CardBack({ id="", answer="", qrUrl="", gradientStyle="", colorStyle="" 
         fontSizeStyle = "xxxxl";
     }
 
-    function onImageError() {
-        setQrImageErrors([...qrImageErrors, id]);
+
+    function onImageError(url) {
+        if (!qrUrlErrors.includes(url))
+        {
+            setQrUrlErrors([...qrUrlErrors, url]);
+        }
         setImageError(true);
     }
 
@@ -67,7 +72,7 @@ function CardBack({ id="", answer="", qrUrl="", gradientStyle="", colorStyle="" 
                         qrUrl && !imageError &&
                         <div className="qr-wrapper">
                             <figure className={`qr ${gradientStyle}`}>
-                                <img src={qrUrl} alt="QR code to related information" onError={onImageError} />
+                                <img src={qrUrl} alt="QR code to related information" onError={() => onImageError(qrUrl)} />
                             </figure>
                         </div>
                     }
@@ -77,4 +82,10 @@ function CardBack({ id="", answer="", qrUrl="", gradientStyle="", colorStyle="" 
     );
 }
 
-export default CardBack;
+CardBack.propTypes = {
+    id: PropTypes.string,
+    answer: PropTypes.string.isRequired,
+    qrUrl: PropTypes.string,
+    gradientStyle: PropTypes.string,
+    colorStyle: PropTypes.string
+}

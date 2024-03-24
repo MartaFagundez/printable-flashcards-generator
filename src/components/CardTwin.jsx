@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 export default function CardTwin({gradient}) {
   return (
@@ -11,4 +12,8 @@ export default function CardTwin({gradient}) {
       </div>
     </div>
   )
+}
+
+CardTwin.propTypes = {
+  gradient: PropTypes.string
 }

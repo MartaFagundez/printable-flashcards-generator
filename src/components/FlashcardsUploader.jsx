@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import PropTypes from "prop-types";
 
 import { useFlashcardsContext } from "../contexts/FlashcardsContext";
 import { Tooltip } from 'react-tooltip';
 import InfoModal from "./InfoModal";
 
 export default function FlashcardsUploader({page="home"}) {
-  const {
-    store: { qrImageErrors },
-    actions: { setFlashcardsList, setCategoriesList },
-  } = useFlashcardsContext();
+  const {actions: { setFlashcardsList, setCategoriesList }} = useFlashcardsContext();
   const [errorMsg, setErrorMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -174,4 +172,8 @@ export default function FlashcardsUploader({page="home"}) {
       )}
     </div>
   );
+}
+
+FlashcardsUploader.propTypes = {
+  page: PropTypes.string
 }

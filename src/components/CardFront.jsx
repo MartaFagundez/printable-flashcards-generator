@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 
 import { useFlashcardsContext } from "../contexts/FlashcardsContext";
 
-function CardFront({ id, category, question, gradientStyle, colorStyle }) {
+export default function CardFront({ id="", category="", question="", gradientStyle="gradient-default", colorStyle="color-default" }) {
   const {store: {hideId}} = useFlashcardsContext();
 
   let fontSizeStyle = "";
@@ -60,4 +61,10 @@ function CardFront({ id, category, question, gradientStyle, colorStyle }) {
   );
 }
 
-export default CardFront;
+CardFront.propTypes = {
+  id: PropTypes.string,
+  category: PropTypes.string,
+  question: PropTypes.string.isRequired,
+  gradientStyle: PropTypes.string,
+  colorStyle: PropTypes.string
+}

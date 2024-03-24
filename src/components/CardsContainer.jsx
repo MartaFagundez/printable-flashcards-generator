@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 
-function CardsContainer({ side, bleed, children }) {
+export default function CardsContainer({ side, bleed=false, children }) {
   const firstRowCards = children.slice(0, 4); // Take the first 4 components
   const secondRowCards = children.slice(4); // Take the remaining components
 
@@ -17,4 +18,8 @@ function CardsContainer({ side, bleed, children }) {
   );
 }
 
-export default CardsContainer;
+CardsContainer.propTypes = {
+  side: PropTypes.string.isRequired,
+  bleed: PropTypes.bool,
+  children: PropTypes.node.isRequired
+}

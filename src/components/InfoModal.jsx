@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 import Faqs from './Faqs';
 
@@ -23,4 +24,9 @@ export default function InfoModal({showModal, setShowModal}) {
         </div>
     </div>
   )
+}
+
+InfoModal.propTypes = {
+    showModal: PropTypes.bool.isRequired,
+    setShowModal: PropTypes.func.isRequired
 }

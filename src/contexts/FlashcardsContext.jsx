@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useState} from "react";
+import PropTypes from "prop-types";
 
 // Create the context for the store
 export const FlashcardsContext = createContext(null);
@@ -7,7 +8,8 @@ export const FlashcardsContext = createContext(null);
 const storeInitialState = {
     flashcardsList: [],
     categoriesList: {},
-    qrImageErrors: [],
+    selectedCategory: null,
+    qrUrlErrors: [],
     hideId: false,
     bleed: false
 }
@@ -25,6 +27,7 @@ export function FlashcardsContextProvider({children}) {
         setFlashcardsList: (payload) => {
             return setStore(prevState => ({
                 ...prevState,
+                qrUrlErrors: [],
                 flashcardsList: payload
             }))
         },
@@ -34,10 +37,16 @@ export function FlashcardsContextProvider({children}) {
                 categoriesList: payload
             }))
         },
-        setQrImageErrors: (payload) => {
+        setSelectedCategory: (payload) => {
             return setStore(prevState => ({
                 ...prevState,
-                qrImageErrors: payload
+                selectedCategory: payload
+            }))
+        },
+        setQrUrlErrors: (payload) => {
+            return setStore(prevState => ({
+                ...prevState,
+                qrUrlErrors: payload
             }))
         },
         setHideId: (payload) => {
@@ -69,4 +78,8 @@ export function useFlashcardsContext() {
         throw new Error("useFlashcardsContext must be used inside a FlashcardsContextProvider");
     }
     return context;
+}
+
+FlashcardsContextProvider.propTypes = {
+    children: PropTypes.node
 }

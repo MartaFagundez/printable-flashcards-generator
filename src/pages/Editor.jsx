@@ -28,11 +28,16 @@ export default function Editor() {
       const { id, question, answer, category_name, qr_url } = flashcard;
       const categoryStyle = categoriesList[category_name ? category_name : "none"];
       const { colorStyle, gradientStyle } = colorStylesList[categoryStyle];
+      
+      let uniqueTime = "";
+      if (qr_url) {
+        uniqueTime = new Date().getTime().toString();
+      }
 
       const front = (
         <CardFront
-          key={`front-${index}`}
-          id={ id === undefined ? index + 1 : id}
+          key={`front-${question}${id ? id : ""}${category_name ? category_name : ""}`}
+          id={(id === undefined ? index + 1 : id).toString()}
           category={category_name}
           question={question}
           colorStyle={colorStyle}
@@ -42,8 +47,8 @@ export default function Editor() {
 
       const back = (
         <CardBack
-          key={`back-${index}`}
-          id={ id === undefined ? index + 1 : id}
+          key={`back-${answer}${id ? id : ""}${qr_url ? qr_url + uniqueTime : ""}`}
+          id={ (id === undefined ? index + 1 : id).toString()}
           answer={answer}
           qrUrl={qr_url}
           colorStyle={colorStyle}
@@ -79,7 +84,7 @@ export default function Editor() {
       {/* Panels */}
       <div className="panels-wrapper">
         {/* Settings Panel */}
-        <section className="settings-section offcanvas-xxl offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        <section className="settings-section offcanvas-xxl offcanvas-start text-bg-dark vh-100" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
             <div className="d-flex d-xxl-none justify-content-end position-relative z-3">
               <button
                 type="button"
