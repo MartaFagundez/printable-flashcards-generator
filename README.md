@@ -35,8 +35,9 @@ The file must contain at least 1 flashcard and can have a maximum of 120 flashca
 
 ### Print Settings
 
-First you generate a pdf file and then print it.
-In [this image](/public/assets/save_as_pdf_settings.png) you can see the configuration required to generate the pdf file correctly.
+- First you generate a pdf file and then print it.
+- Make sure the Layout is set to **Landscape**, that paper size is **A4**, and that Margins are set to **None**.
+- In [this image](/public/assets/save_as_pdf_settings.png) you can see the configuration required to generate the pdf file correctly.
 
 ### Example Files
 

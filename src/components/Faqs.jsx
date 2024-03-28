@@ -88,8 +88,11 @@ export default function Faqs() {
           data-bs-parent="#accordionFaqs"
         >
           <div className="accordion-body">
-            <p>First you generate a pdf file and then print it.</p>
-            <p>In <a href={`${assetsUrlBase}save_as_pdf_settings.png`} target="_blank" rel="noopener noreferrer">this image </a> you can see the configuration required to generate the pdf file correctly.</p>
+            <ul>
+              <li>First you generate a pdf file and then print it.</li>
+              <li>Make sure the Layout is set to <strong>Landscape</strong>, that paper size is <strong>A4</strong>, and that Margins are set to  <strong>None</strong>.</li>
+              <li>In <a href={`${assetsUrlBase}save_as_pdf_settings.png`} target="_blank" rel="noopener noreferrer">this image </a> you can see the configuration required to generate the pdf file correctly.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -119,8 +122,14 @@ export default function Faqs() {
         >
           <div className="accordion-body">
             <ul>
-                <li><a href={`${assetsUrlBase}example.json`} target="_blank" rel="noopener noreferrer">File to generate the flashcards (.json)</a></li>
-                <li><a href={`${assetsUrlBase}example.pdf`} target="_blank" rel="noopener noreferrer">File generated and ready to print (.pdf)</a></li>
+                <li>
+                  <a href={`${assetsUrlBase}example.json`} target="_blank" rel="noopener noreferrer">See example file to generate the flashcards (.json)</a> or
+                  <a href={`${assetsUrlBase}example.json`} download={"Example.json"}> download it.</a>
+                </li>
+                <li>
+                  <a href={`${assetsUrlBase}example.pdf`} target="_blank" rel="noopener noreferrer">See example of file generated and ready to print (.pdf)</a> or
+                  <a href={`${assetsUrlBase}example.pdf`} download={"Example.pdf"}> download it.</a>
+                </li>
             </ul>
           </div>
         </div>
